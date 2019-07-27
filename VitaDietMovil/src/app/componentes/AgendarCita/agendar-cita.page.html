@@ -1,0 +1,101 @@
+<ion-menu side="start" menuId="first">
+    <ion-header>
+      <ion-toolbar color="yellow">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Primer</ion-item>
+      </ion-list>
+    </ion-content>
+   </ion-menu>
+  
+   <ion-menu side="start" menuId="custom" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="yellow">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/login">Inicio</ion-item>
+        <ion-item>Consultar Dieta</ion-item>
+        <ion-item>Consultar Agenda</ion-item>
+        <ion-item routerLink="/login">Registrar Peso</ion-item>
+      </ion-list>
+    </ion-content>
+   </ion-menu>
+  
+   <ion-menu side="end" type="push"> 
+    <ion-header>
+      <ion-toolbar color="yellow">
+        <ion-title>End Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Tercer</ion-item>
+      </ion-list>
+    </ion-content>
+   </ion-menu> 
+  
+   <ion-router-outlet main></ion-router-outlet> 
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">VITADIET MOBILE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div class="panelCU">
+    <ion-item>
+      <ion-label  align="center">AGENDAR CITA</ion-label>
+    </ion-item>
+    </div>
+   <div class="panelCU">
+      <ion-item>
+          <b> <u><ion-label position="left">Seleccionar nutricionista:</ion-label></u></b>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Juan Carlos Rivas</ion-label>
+          <ion-checkbox ></ion-checkbox>
+          <ion-label position="floating">Orlando Ortiz Osorio</ion-label>
+          <ion-checkbox ></ion-checkbox>
+          <ion-label position="floating">Jairo Alfonso Martinez</ion-label>
+          <ion-checkbox ></ion-checkbox>
+        </ion-item>
+        <br/>
+        <ion-item>
+           <b> <u><ion-label position="left">Seleccionar fecha:</ion-label></u></b>
+          </ion-item>
+          <ion-item>
+              <ion-label>DD MM YY</ion-label>
+              <ion-datetime displayFormat="DD MM YY" ></ion-datetime>            
+          </ion-item>
+        <br/>
+       
+        <ion-item>
+           <b> <u><ion-label position="left">Seleccionar Hora:</ion-label></u></b>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">7:00AM</ion-label>
+              <ion-checkbox></ion-checkbox>  
+              <ion-label position="floating">7:45AM</ion-label>
+              <ion-checkbox></ion-checkbox>   
+              <ion-label position="floating">8:30AM</ion-label>
+              <ion-checkbox></ion-checkbox>   
+              <ion-label position="floating">9:15AM</ion-label>
+              <ion-checkbox></ion-checkbox>   
+              <ion-label position="floating">10:00AM</ion-label>
+              <ion-checkbox></ion-checkbox>   
+            </ion-item>        
+              <br/>
+              <ion-button (click)="onSubmitAgendar()" expand="block">Agendar</ion-button>
+          <br/>
+  </div>    
+    
+</ion-content>

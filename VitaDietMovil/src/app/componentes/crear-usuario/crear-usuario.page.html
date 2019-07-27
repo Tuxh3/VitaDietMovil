@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">VITADIET MOBILE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="panelCU">
+    <img class="iconCU" src="assets/icon/avatar.svg" alt="">
+    <ion-item>
+      <ion-label  align="center">CREAR CUENTA</ion-label>
+    </ion-item>
+  </div>
+  <div class="panelCU">
+      <ion-item>
+          <ion-label position="floating">USUARIO:</ion-label>
+          <ion-input type="number" [(ngModel)]="usuarioN" name="usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">CONTRASEÑA:</ion-label>
+          <ion-input type="password" [(ngModel)]="passN" name="pass"></ion-input>
+        </ion-item>
+        <br/>
+            <ion-button (click)="onSubmitRegister()" expand="block">REGISTRARSE</ion-button>
+        <br/>
+            <p text-center routerLink="/login">Regresar</p>
+  </div>    
+    
+</ion-content>
