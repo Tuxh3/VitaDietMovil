@@ -8,7 +8,7 @@ module.exports = function(config) {
     basePath: '',
 
 
-    // frameworks to use
+    // frameworks to use test y pruebas
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
