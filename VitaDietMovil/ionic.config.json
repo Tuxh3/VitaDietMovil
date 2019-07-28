@@ -1,5 +1,7 @@
 {
-  "name": "VitaDietMovil",
-  "integrations": {},
+  "name": "VitaDiet",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
