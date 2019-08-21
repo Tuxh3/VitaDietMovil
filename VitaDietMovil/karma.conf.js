@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sat Jul 27 2019 16:35:45 GMT-0500 (GMT-05:00)
+// Generated on Sat Jul 27 2019 17:03:43 GMT-0500 (GMT-05:00)
 
 module.exports = function(config) {
   config.set({
@@ -10,20 +10,13 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'browserify'],
 
 
     // list of files / patterns to load in the browser
     files: [
       'test/**/*.spec.js',
-      'test/**/*.spec.js[3ts',
-      'test/**/*.spec.ts',
-      'VitaDietMovil/src/app/componentes/crear-usuario/Test/**/*.spec.js[3ts',
-      'VitaDietMovil/src/app/componentes/crear-usuario/Test/**/*.spec.js[3',
-      'test/**/*.spec.js',
-      'Test/**/*.spec.js',
-      'C:/Users/Tuxh/Desktop/VitaDietLogin/VitaDietMovil/src/app/componentes/crear-usuario/Test/karma.conf.js',
-      'C:/Users/Tuxh/Desktop/VitaDietLogin/VitaDietMovil/src/app/componentes/crear-usuario/Test/*.spec.js'
+      'test/**/*.spec.js'
     ],
 
 
@@ -35,6 +28,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'test/**/*.spec.js':['browserify']
     },
 
 
@@ -63,7 +57,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
@@ -72,6 +66,13 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+
+    plugins: [
+      'karma-chrome-launcher',
+      'karma-jasmine',
+      'karma-browserify'
+    ]
+
   })
 }
