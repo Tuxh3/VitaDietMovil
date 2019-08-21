@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="container top"><img src="/assets/img/logo.png" ></div>
+  <ion-slides>  
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Registrar Comentario</span>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input  type="text" [(ngModel)]="sugerencia.comentario" placeholder="Comentario" ></ion-input>
+        </ion-item>
+          
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="number" [(ngModel)]="sugerencia.calificacion" placeholder="Calificación"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="saveSugerencia()" expand="block">
+          Registrar
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  
+  <div class="first">
+    <div class="nombreL" [ngStyle]="{'background-position-x': wavesPosition + 'px'}"></div>
+  </div>
+
+  <div class="ocean">
+    <div class="waves" [ngStyle]="{'background-position-x': wavesPosition + 'px'}"></div>
+
+    <div class="container bottom ion-text-center">
+      <span>Bienvenido a nuestra aplicacion para controlar su dieta y peso. Disfrutala!!</span>
+    </div>
+  </div>
+</ion-content>
+

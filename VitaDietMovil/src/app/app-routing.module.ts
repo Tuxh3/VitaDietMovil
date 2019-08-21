@@ -12,6 +12,11 @@ const routes: Routes = [
   { path: 'ingreso', loadChildren: './pages/ingreso/ingreso.module#IngresoPageModule' },
   { path: 'login-usuario', loadChildren: './pages/login-usuario/login-usuario.module#LoginUsuarioPageModule', canActivate: [LoginGuard] },
   { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  { path: 'sugerencia', loadChildren: './pages/sugerencia/sugerencia.module#SugerenciaPageModule', canActivate:[AuthGuard] },
+  //{ path: 'sugerencia', loadChildren: './pages/sugerencia/sugerencia.module#SugerenciaPageModule' },
+  { path: 'sugerencia/:id', loadChildren: './pages/sugerencia/sugerencia.module#SugerenciaPageModule', canActivate:[AuthGuard]},
+  { path: 'sugerencialista', loadChildren: './pages/sugerencialista/sugerencialista.module#SugerencialistaPageModule' },
+  { path: 'pesolisto', loadChildren: './pages/pesolisto/pesolisto.module#PesolistoPageModule' },
 ];
 
 @NgModule({

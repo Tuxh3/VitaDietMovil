@@ -54,7 +54,8 @@ export class RegistrarPage implements OnInit {
         await this.pesoService.updatePeso(this.pesoId, this.peso);
         await this.loading.dismiss();
 
-        this.navCtrl.navigateBack('/ingreso');//ingreso
+        //this.navCtrl.navigateBack('/ingreso');//ingreso
+        this.navCtrl.navigateBack('/pesolisto');//ingreso
       } catch (error) {
         this.presentToast('Error al intentar guardar');
         this.loading.dismiss();
@@ -65,7 +66,8 @@ export class RegistrarPage implements OnInit {
         await this.pesoService.addPeso(this.peso);
         await this.loading.dismiss();
 
-        this.navCtrl.navigateBack('/ingreso');
+        //this.navCtrl.navigateBack('/ingreso');
+        this.navCtrl.navigateBack('/pesolisto');
       } catch (error) {
         this.presentToast('Error al intentar guardar');
         this.loading.dismiss();

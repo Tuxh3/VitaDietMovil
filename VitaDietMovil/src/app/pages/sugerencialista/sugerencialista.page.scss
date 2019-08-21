@@ -1,0 +1,81 @@
+.container{    
+
+    &.top{
+        top: 10%;
+        position: absolute;
+        left: 10;
+        right: 0;
+        width: 75%;
+        margin: 0 auto; 
+    }
+    
+}
+
+ion-slides{
+    height: 100%;
+
+    .slide-inner {
+        width: 75%;
+        color: #fff;
+        background-color: #0072bc;
+        border-radius: 10px;
+    }
+    
+
+}
+
+
+.ocean{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 35%;
+    background: var(--ion-color-primary);
+
+
+    .waves{
+        position: absolute;
+        top: -100px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-image: url('/assets/img/fondo.png');
+        background-size: contain;
+        transition: all 0.5s;
+    }
+
+    span{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10%;
+        width: 75%;
+        margin: 0 auto;
+        color: azure;
+    }
+
+   
+}
+
+.first{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 82%;
+
+    //background: var(--ion-color-primary);
+
+.nombreL{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    height: 85px;
+    background-image: url('/assets/img/nombre.png');
+    background-size: contain;
+    transition: all 0.5s;
+}
+}
+
