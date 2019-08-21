@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController, IonDatetime } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,21 +10,37 @@ import { Router } from '@angular/router';
 })
 export class AgendarCitaPage implements OnInit {
 
-  usuario: string;
-  pass: string;
-  
-  constructor(private authFB: AuthService, public router: Router, public alertController: AlertController) { }
+  citas;
+  salida: Array<any>;
+  cita;
+  constructor(private store: AuthService) { 
+    this.getCitas();
+    
+  }
 
   ngOnInit() {
+    
   }
 
-  onSubmitAgendar(){
-    this.authFB.login(this.usuario+"@mail.com" , this.pass).then(response => {
-      this.router.navigate(['/home']);
-    }).catch(err => alert('Se ha agendado la cita'));
+  getCitas(){
+    this.citas = this.store.obtenerCitas().subscribe(
+      res => {
+        this.salida = res;
+        console.log(res);
+      });
   }
 
-  
+  getCita(id: string){
+    this.store.obtenerCita(id).subscribe(res => {
+      this.cita = res;
+      console.log(this.cita);
+    });
+  }
+
+  registrarCita(nutricionista:string, fecha:IonDatetime){
+    this.store.agendarcita(nutricionista,fecha);
+  }
+
 }
 
 export class AlertExample {

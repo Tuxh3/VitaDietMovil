@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cancelar Pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf = "salida">
+    <ion-item-sliding *ngFor = "let order of salida">
+      <ion-item>
+        <ion-label>
+          {{order.documento}}
+        </ion-label>
+        <ion-label (click) = removeOrder(order.id)>borrar</ion-label>
+        <ion-label (click) = getOrder(order.id)>detalles</ion-label>
+        <ion-item-options side = "end">
+          
+          <ion-item-option  color="secondary">
+            <ion-icon name = "checkmark" slot="end"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        <!-- <ion-label>
+          {{order.nombre}}
+        </ion-label>
+        <ion-label>
+          {{order.apellido}}
+        </ion-label>
+        <ion-label>
+          {{order.direccion}}
+        </ion-label>
+        <ion-label>
+          {{order.telefono}}
+        </ion-label>
+        <ion-label>
+          {{order.dieta}}
+        </ion-label> -->
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+  
+  <ion-item>
+      <ion-label align="center">
+          DETALLES DE PEDIDO
+      </ion-label>
+  </ion-item>
+  <ion-item *ngIf = "order">
+    <ion-list>
+      <ion-label>
+        documento: {{order.documento}}
+      </ion-label>
+      <ion-label>
+        nombre: {{order.nombre}}
+      </ion-label>
+      <ion-label>
+        apellido: {{order.apellido}}
+      </ion-label>
+      <ion-label>
+        direccion: {{order.direccion}}
+      </ion-label>
+      <ion-label>
+        dieta: {{order.dieta}}
+      </ion-label>
+      <ion-label>
+        telefono: {{order.telefono}}
+      </ion-label>
+  
+  </ion-list>
+ </ion-item> 
+
+</ion-content>
